@@ -26,7 +26,7 @@ function bombTimer(str, time){
       console.log(str)
     clearInterval(s);
   }
-  }, 1000);
+  }, t* 1000);
 }
 
 //TASK 4
@@ -69,4 +69,11 @@ function average(arr){
   }
 
 
-=
+//TASK 9
+
+function concatFirstNestedArrays(arr){
+  let arrays = arr.reduce(function(a,b){
+  return a.concat(b)
+  });
+  return arrays;
+}
