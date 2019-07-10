@@ -52,7 +52,15 @@ function bombTimer(str, time){
 
 //TASK 6
 
-
+function filterNumbers(arr, maxNumber){
+ let completeArray = [];
+ arr.filter(function(number){
+   if(maxNumber>number){
+     completeArray.push(number);
+   }
+ });
+ return completeArray;
+}
 //TASK 7
 
 
