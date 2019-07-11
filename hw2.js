@@ -48,6 +48,7 @@ function bombTimer(str, time){
     clearInterval(s);
   }
   }, 1000);
+  setTimeout(s, t*1000);
 }
 
 //TASK 6
@@ -63,6 +64,19 @@ function filterNumbers(arr, maxNumber){
 }
 //TASK 7
 
+function minMax(arr){
+  let min = arr[0];
+  let max = arr[0];
+  for( let i=0; i<arr.length; i++){
+    if (min>arr[i]){
+      min = arr[i]
+    }
+    if (max<arr[i]){
+      max = arr[i];
+    }
+  }
+  console.log(`min : ${min} and max : ${max}`);
+}
 
 //TASK 8
 
@@ -73,7 +87,7 @@ function average(arr){
       total+=arr;
     });
     const averageArr = total/count;
-    return averageArr;
+    return averageArr.toFixed(2);
   }
 
 
