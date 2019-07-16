@@ -39,16 +39,14 @@ function factorial(n) {
 
 function bombTimer(str, time){
   let t = time;
-  let s = setInterval(()=>{
-    if(t>0){
-      console.log(t);
-      t--;
+  let s = setTimeout(() =>{
+    if(t===0){
+      console.log(str);
     }else{
-      console.log(str)
-    clearInterval(s);
-  }
-  }, 1000);
-  setTimeout(s, t*1000);
+      console.log(t);
+      return bombTimer(str, time-1);
+    }
+  },1000);
 }
 
 //TASK 6
